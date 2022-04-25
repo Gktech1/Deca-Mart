@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+            <form action="/register" method="POST" class="row g-3 rounded form_div">
+                <!-- Form Input Fields -->
+                <div class="row g-3">
+                    <div class="col">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="first-name" placeholder="First name" aria-label="First name">
+                    </div>
+
+                    <div class="col">
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="last-name" placeholder="Last name" aria-label="Last name">
+                    </div>
+                    <div class="col">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" aria-label="Username">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="email">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="role" class="form-label">Role</label>
+                        <select id="role" class="form-select" name="role">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" id="password">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" name="confirm-password" class="form-control" id="confirm-password">
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            </form>
+
+    </div>
+
+
+{% endblock %}
