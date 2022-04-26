@@ -6,26 +6,17 @@
 
 {% block content %}
     <div class="container-fluid">
-            <form action="/register" method="POST" class="row g-3 rounded form_div">
+            <form action="{{url_for('register_page')}}" method="POST" class="row g-3 rounded form_div" enctype="application/x-www-form-urlencoded">
                 <!-- Form Input Fields -->
                 <div class="row g-3">
                     <div class="col">
-                        <label for="first-name" class="form-label">First Name</label>
-                        <input type="text" class="form-control" name="first-name" placeholder="First name" aria-label="First name">
-                    </div>
-
-                    <div class="col">
-                        <label for="last-name" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" name="last-name" placeholder="Last name" aria-label="Last name">
-                    </div>
-                    <div class="col">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" name="username" placeholder="Username" aria-label="Username">
+                        <input type="text" class="form-control" name="username" placeholder="Username" aria-label="Username" >
                     </div>
 
                     <div class="col-md-6">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" id="email">
+                        <input type="email" name="email" class="form-control" id="email" >
                     </div>
 
                     <div class="col-md-4">
@@ -38,7 +29,7 @@
 
                     <div class="col-md-6">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control" id="password">
+                        <input type="password" name="password" class="form-control" id="password" >
                     </div>
 
                     <div class="col-md-6">
@@ -51,7 +42,10 @@
                     </div>
                 </div>
             </form>
-
+            <div>
+            
+                <span><p>This is London</p></span>
+            </div>
     </div>
 
 
