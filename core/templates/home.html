@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content%}
+
+{% for i in range(100)%}
+<img src="static/coding.jpg" class="rounded float-start img-thumbnail small" alt="...">
+{%endfor%}
+{% endblock %}
