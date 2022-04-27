@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content%}
+<div class="container register">
+    <h2 class="text-center text">Deca Mart</h2>
+    <form method="POST" class="form-register">
+        {{ form.hidden_tag()}}
+        {{form.first_name(class="form-control mt-1", placeholder="First name")}}
+        {{form.last_name(class="form-control mt-1", placeholder="Last name")}}
+        {{form.email(class="form-control mt-1", placeholder="email")}}
+        {{form.role(class="form-select mt-1")}}
+        {{form.password(class="form-control mt-1", placeholder="password")}}
+        {{form.confirm_password(class="form-control mt-1", placeholder="confirm password")}}
+        {{form.submit(class="btn btn-block btn-secondary form-control mt-4")}}
+
+        <div class="check-box text-center mt-4">
+            <h5>Already signed up?</h5>
+            <a href="{{url_for('login')}}" class="btn btn-sm btn-secondary">Login</a>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
