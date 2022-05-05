@@ -7,6 +7,14 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///decaMart.db'
 app.config['SECRET_KEY'] = '05d859a0f7e32182c3bacc8b'
 
+# File Upload Folder
+UPLOAD_FOLDER = '/Users/decagon/Desktop/group_4_project/Deca-Mart/core/static/media'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+
+# File upload config
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 db = SQLAlchemy(app) 
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)

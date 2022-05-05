@@ -12,10 +12,10 @@ class RegisterForm(FlaskForm):
         
     first_name = StringField(label = 'first_name', validators= [DataRequired()])
     last_name = StringField(label = 'last_name', validators= [DataRequired()])
-    email = StringField(label = 'email', validators= [Email(),DataRequired()])
-    role = SelectField(label = 'register as', choices=[('Merchant', 'Merchant'), ('Buyer', 'Buyer1')])
-    password = PasswordField(label='password', validators= [Length(min=6), DataRequired()])
-    confirm_password = PasswordField(label='confirm password', validators= [EqualTo('password'), DataRequired()])
+    email = StringField(label = 'Email', validators= [Email(),DataRequired()])
+    role = SelectField(label = 'Register as', choices=[('Merchant', 'Merchant'), ('Buyer', 'Buyer')])
+    password = PasswordField(label='Password', validators= [Length(min=6), DataRequired()])
+    confirm_password = PasswordField(label='Confirm password', validators= [EqualTo('password'), DataRequired()])
     submit = SubmitField(label='Register')
 
 class LoginForm(FlaskForm):

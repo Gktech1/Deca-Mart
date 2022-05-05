@@ -19,7 +19,7 @@ class Users(db.Model, UserMixin):
     email = db.Column(db.String(length = 30), nullable = False, unique = True)
     password_hash = db.Column(db.String(length = 60), nullable = False)
     wallet = db.Column(db.Integer(), nullable = False, default = 10000)
-    role = db.Column(db.Enum(Role))
+    role = db.Column(db.String(8), nullable = False)
     items = db.relationship('Items', backref='owner', lazy = True)
 
     @property
@@ -42,6 +42,7 @@ class Items(db.Model):
     category = db.Column(db.String())
     price = db.Column(db.Integer(), nullable=False)
     date = db.Column(db.DateTime(), default=datetime.datetime.utcnow(), nullable=False)
+    file_name =db.Column(db.String(length = 200), nullable = False)
     user_id = db.Column(db.Integer(), db.ForeignKey('users.id'))
     cart_items = db.relationship('Cart_Items', backref = 'item', lazy = True)
     order_items = db.relationship('Order_Items', backref = 'item', lazy = True)
