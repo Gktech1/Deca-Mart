@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="../static/css/styles.css"> -->
     <link rel="stylesheet" href="../static/css/all.css">
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/style1.css">
   
     <title>
         {% block title %}
@@ -41,9 +42,9 @@
             <a class="nav-link text-dark" href="/casual">Casual</a>
           </li>
           {% if current_user.is_authenticated and current_user.role == "Merchant"%}
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link text-dark" href="{{ url_for('summary')}}">Sales</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link text-dark" href="{{ url_for('upload')}}">Upload Item</a>
           </li>

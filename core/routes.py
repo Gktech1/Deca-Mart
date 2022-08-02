@@ -229,8 +229,8 @@ def pay():
     else:
         current_user.wallet = current_user.wallet - checkout[1]
         
-        for item in checkout[0]:
-            db.session.delete(item)
+        # for item in checkout[0]:
+        #     db.session.delete(item)
         db.session.commit()
         flash(f'Order successful', category='success')
     return redirect("/payment")
